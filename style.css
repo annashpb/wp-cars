@@ -12,3 +12,84 @@
  Text Domain:  twentyfifteenchild
 */
 
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Spartan";
+  font-weight: 200;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+  margin-left: -1px;
+}
+
+
+
+
+
+
+#site-header__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* MENU */
+
+.menu {
+    list-style: none;
+    display: flex;
+    padding: 50px 0px;
+}
+
+.menu-item {
+    margin-right: 60px;
+}
+
+.menu-item a {
+    font-family: "Spartan";
+  font-weight: 200;
+  text-decoration: none;
+  color: #000000;
+}
+
+.menu-item a:hover {
+    font-weight: 600;
+}
+
+
+
+
+.showrooms-main__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
