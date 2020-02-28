@@ -49,47 +49,97 @@ img {
   margin-left: -1px;
 }
 
-
-
-
-
-
-#site-header__container {
-    display: flex;
-    justify-content: space-between;
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
 }
-
 
 /* MENU */
 
 .menu {
-    list-style: none;
-    display: flex;
-    padding: 50px 0px;
+  list-style: none;
+  display: flex;
+  padding: 50px 0px;
 }
 
-.menu-item {
-    margin-right: 60px;
+.menu-item:not(:last-child) {
+  margin-right: 60px;
 }
 
 .menu-item a {
-    font-family: "Spartan";
+  font-family: "Spartan";
   font-weight: 200;
   text-decoration: none;
   color: #000000;
 }
 
 .menu-item a:hover {
-    font-weight: 600;
+  font-weight: 600;
 }
 
+/* SLIDER */
 
+.slider__item {
+  position: relative;
+}
 
+.slider__item img {
+  width: 100%;
+}
 
-.showrooms-main__list {
+.slider__item p {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 10%;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.slider__control {
+  position: absolute;
+  top: 50%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  height: 50px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  transition: opacity 200ms linear;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+
+.slider__control_left {
+  left: 0;
+}
+
+.slider__control_right {
+  right: 0;
+}
+
+.slider__control::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
 }
 
 

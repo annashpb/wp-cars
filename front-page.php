@@ -3,8 +3,19 @@
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-        <section class="slider">
+        <section class="slider-section">
+            <?php if (have_rows('slider')) : ?>
 
+                <div class="slider__wrapper">
+
+                    <?php while (have_rows('slider')) : the_row(); ?>
+                        <div class="slider__item">
+                            <img src="<?php echo get_sub_field('slider-image')["url"]; ?>" alt="<?php echo get_sub_field('slider-image')["alt"]; ?>">
+                            <p><?php the_sub_field('slider-text'); ?></p>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
         </section>
 
         <section class="showrooms-main">
@@ -43,5 +54,4 @@
     </main><!-- #main -->
 </div><!-- #primary -->
 
-<?php
-get_footer();
+<?php get_footer(); ?>
