@@ -44,11 +44,7 @@
                 <h2 class="cars-main__headline">About us</h2>
                 <?php
                 if (have_rows('slider')) : ?>
-                    <p><?php
-                        if ((have_rows('slider'))) {
-                            echo get_field('frontpage_content');
-                        }
-                        ?></p>
+                    <p><?php echo get_field('frontpage_content'); ?></p>
 
                 <?php endif; ?>
             </div>
@@ -108,7 +104,21 @@
                 <?php endif; ?>
             </div>
         </section>
+        <section class="partners-main">
+            <div class="container">
+                <?php
+                if (have_rows('partners')) : ?>
+                    <ul class="partners-main__list">
+                        <?php while (have_rows('partners')) : the_row(); ?>
+                            <li class="partners-main__tem">
+                                <img src="<?php echo get_sub_field('partners-images')['sizes']['medium']; ?>" alt="<?php echo get_sub_field('partners-images')["alt"]; ?>">
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
 
+                <?php endif; ?>
+            </div>
+        </section>
 
 
     </main><!-- #main -->

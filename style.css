@@ -200,6 +200,13 @@ img {
   font-weight: 600;
 }
 
+.partners-main__list {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  list-style: none;
+}
+
 .showroom__headline--min {
   text-align: center;
   text-transform: uppercase;
