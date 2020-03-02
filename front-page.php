@@ -40,7 +40,18 @@
         </section>
 
         <section class="content-main">
+            <div class="container">
+                <h2 class="cars-main__headline">About us</h2>
+                <?php
+                if (have_rows('slider')) : ?>
+                    <p><?php
+                        if ((have_rows('slider'))) {
+                            echo get_field('frontpage_content');
+                        }
+                        ?></p>
 
+                <?php endif; ?>
+            </div>
         </section>
 
         <section class="cars-main">
