@@ -37,8 +37,7 @@
     $args = array(
         'post_type' => 'car',
     );
-    $the_query = new WP_Query($args);
-    $showrooms = get_field('showroom'); ?>
+    $the_query = new WP_Query($args); ?>
 
 <pre>
 <?php var_dump($the_query); ?>

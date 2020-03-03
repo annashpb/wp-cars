@@ -1,7 +1,17 @@
 <footer id="colophon" class="site-footer">
 
-    <?php wp_footer(); ?>
+    
+    <div class="container footer-container">
+        <div class="form">
+        <?php echo do_shortcode("[footer-form]"); ?>
+        </div>
+        
+        <p><?php echo get_field('copyright', 'option'); ?></p>
+    </div>
 
-    </body>
+</footer>
+<?php wp_footer(); ?>
 
-    </html>
+</body>
+
+</html>

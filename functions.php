@@ -25,3 +25,20 @@ function register_my_menu()
 	register_nav_menu('header-menu', __('Header Menu'));
 }
 add_action('init', 'register_my_menu');
+
+
+add_shortcode('footer-form', 'view_form');
+function view_form()
+{
+	$field = '<form>
+	<p>Call me, please</p>
+	<label><p>Name</p>
+		<input type="text" name="name" placeholder="Please, enter your name" required>
+	</label>
+	<label><p>Phone number</p>
+		<input type="number" name="phone" placeholder="Please, enter your phone number">
+	</label>
+	<button type="submit">Send</button>
+</form>';
+	return $field;
+}

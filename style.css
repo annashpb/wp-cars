@@ -212,3 +212,7 @@ img {
   text-transform: uppercase;
 }
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
